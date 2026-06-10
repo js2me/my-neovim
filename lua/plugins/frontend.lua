@@ -103,5 +103,18 @@ return {
     keys = {
       { "<leader>gb", function() Snacks.picker.git_branches() end, desc = "Git Branches" },
     },
+    opts = {
+      picker = {
+        exclude = {
+          "node_modules",
+          ".git",
+          "dist",
+          ".next",
+          ".nuxt",
+          "build",
+          ".cache",
+        },
+      },
+    },
   },
 }

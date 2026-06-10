@@ -1,4 +1,7 @@
 return {
+  -- LazyVim nvim-cmp extra (moved from lazy.lua to fix import order warning)
+  { import = "lazyvim.plugins.extras.coding.nvim-cmp" },
+
   -- Disable blink.cmp (crashes nvim in insert mode)
   {
     "Saghen/blink.cmp",

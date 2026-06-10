@@ -63,4 +63,5 @@ echo 'export GITLAB_TOKEN="your-token"' >> ~/.zshrc
 | `lua/plugins/fix-cmdline.lua` | Disable blink.cmp, nvim-cmp with project import priority |
 | `lua/plugins/gitsigns.lua` | Inline git blame |
 | `lua/plugins/gitlab.lua` | GitLab MR integration |
+| `lua/plugins/snacks.lua` | Snacks explorer (show hidden files) |
 | `lua/plugins/theme.lua` | TokyoNight transparent theme |
