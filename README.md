@@ -11,6 +11,7 @@ LazyVim-based config for React/TypeScript frontend development with GitLab integ
 - Oxlint linter
 - Transparent theme (tokyonight)
 - Snacks picker for git branches (`<leader>gb`)
+- nvim-cmp with project import prioritization (`@/` first, `node_modules` last)
 
 ## Install on a new machine
 
@@ -18,11 +19,7 @@ LazyVim-based config for React/TypeScript frontend development with GitLab integ
 
 ```bash
 # Neovim >= 0.11
-# Option 1: download from GitHub releases
 curl -sL https://github.com/neovim/neovim/releases/download/v0.11.3/nvim-linux-x86_64.tar.gz | tar xz -C ~/.local --strip-components=1
-
-# Option 2: if you have a package manager
-# brew install neovim / apt install neovim / etc.
 
 # Go >= 1.25 (for gitlab.nvim)
 curl -sL https://go.dev/dl/go1.26.4.linux-amd64.tar.gz | tar -C ~/.local -xzf -
@@ -63,7 +60,7 @@ echo 'export GITLAB_TOKEN="your-token"' >> ~/.zshrc
 | File | Purpose |
 |------|---------|
 | `lua/plugins/frontend.lua` | TypeScript, Tailwind, oxlint, treesitter parsers |
-| `lua/plugins/fix-cmdline.lua` | Disable blink.cmp in cmdline (crash fix) |
+| `lua/plugins/fix-cmdline.lua` | Disable blink.cmp, nvim-cmp with project import priority |
 | `lua/plugins/gitsigns.lua` | Inline git blame |
 | `lua/plugins/gitlab.lua` | GitLab MR integration |
 | `lua/plugins/theme.lua` | TokyoNight transparent theme |
