@@ -1,0 +1,6 @@
+[Unit]
+Description=Sync neovim config to GitHub
+
+[Service]
+Type=oneshot
+ExecStart=%h/projects/open-source/my-neovim/sync.sh
