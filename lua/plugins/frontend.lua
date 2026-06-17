@@ -9,6 +9,7 @@ return {
     opts = {
       servers = {
         tailwindcss = {},
+        biome = {},
       },
     },
   },
@@ -61,6 +62,7 @@ return {
         "json-lsp",
         "html-lsp",
         "css-lsp",
+        "biome",
       },
     },
   },
@@ -68,6 +70,7 @@ return {
   -- oxlint via conform/lint
   {
     "mfussenegger/nvim-lint",
+    enabled = false,
     optional = true,
     opts = {
       linters_by_ft = {
@@ -101,7 +104,13 @@ return {
   {
     "folke/snacks.nvim",
     keys = {
-      { "<leader>gb", function() Snacks.picker.git_branches() end, desc = "Git Branches" },
+      {
+        "<leader>gb",
+        function()
+          Snacks.picker.git_branches()
+        end,
+        desc = "Git Branches",
+      },
     },
     opts = {
       picker = {
